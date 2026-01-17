@@ -12,7 +12,7 @@ vim.opt.swapfile = false
 vim.opt.conceallevel = 2
 vim.opt.scrolloff = 18
 vim.opt.showmode = false
-
+vim.opt.laststatus = 3
 vim.opt['guicursor'] = ''
 
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>', { desc = 'Source a file' })
@@ -34,12 +34,22 @@ vim.keymap.set('v', '<leader>y', '"+y', { desc = '[Y]ank to system clipboard' })
 vim.keymap.set('v', '<leader>d', '"_d', { desc = '[D]elete to void register' })
 vim.keymap.set('x', '<leader>p', '"_dP', { desc = '[P]aste to void register' })
 vim.keymap.set('i', '<C-H>', '<C-W>', { noremap = true }) -- Makes CTRL + Backspcae delete a word back
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Get out of terminal mode' })
 
 -- Remap C-hjkl to navigate splits
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to left split' })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Go to lower split' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Go to upper split' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Go to right split' })
+
+-- Resize windows with HJKL
+vim.keymap.set('n', '<leader>h', ':vertical resize -7<CR>', { silent = true })
+vim.keymap.set('n', '<leader>j', ':resize -7<CR>', { silent = true })
+vim.keymap.set('n', '<leader>k', ':resize +7<CR>', { silent = true })
+vim.keymap.set('n', '<leader>l', ':vertical resize +7<CR>', { silent = true })
+
+vim.o.splitright = true -- New splits open to the right/bottom
+vim.o.splitbelow = true -- New splits open to the right/bottom
 
 vim.api.nvim_create_autocmd('textYankPost', {
     desc = 'Highlight when yanking (copying) text',

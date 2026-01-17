@@ -18,7 +18,7 @@ return {
 
       local statusline = require 'mini.statusline'
       statusline.setup { use_icons = vim.g.have_nerd_font }
-
+      MiniStatusline.section_filename({ bg = 'none' })
       statusline.section_location = function()
         return '%2l:%-2v'
       end

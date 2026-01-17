@@ -34,6 +34,16 @@ return {
       vim.lsp.enable('gopls')
       vim.lsp.enable('pyright')
 
+      vim.api.nvim_create_augroup("BlackFormatPostGroup", { clear = true })
+      vim.api.nvim_create_autocmd("BufWritePost", {
+        pattern = "*.py",
+        group = "BlackFormatPostGroup",
+        callback = function()
+          vim.cmd("silent ! black --quiet %")
+          vim.cmd("edit") -- Reload the buffer to see changes
+        end,
+      })
+
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('my.lsp', {}),
         callback = function(args)
