@@ -1,7 +1,7 @@
 local function setup_obsidian()
 	require("obsidian").setup({
 		legacy_commands = false,
-		workspaces = { { name = "Notes", path = "~/Documents/vaults/deez-notez/" } },
+		workspaces = { { name = "Notes", path = "~/Documents/deez_notez/" } },
 		picker = { name = "telescope" },
 	})
 

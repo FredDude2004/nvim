@@ -12,6 +12,7 @@ vim.pack.add({
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/nvim-lualine/lualine.nvim",
+	"https://github.com/folke/which-key.nvim",
 	{
 		src = "https://github.com/nvim-telescope/telescope.nvim",
 		version = "v0.1.9",
@@ -31,16 +32,16 @@ vim.pack.add({
 	},
 
 	-- Colorschemes
-	"https://github.com/folke/tokyonight.nvim",
-	"https://github.com/neanias/everforest-nvim",
-	"https://github.com/thesimonho/kanagawa-paper.nvim",
-	"https://github.com/catppuccin/nvim",
-	"https://github.com/vague-theme/vague.nvim",
-	"https://github.com/mtendekuyokwa/stoics.nvim",
-	"https://github.com/ankushbhagats/pastel.nvim",
-	"https://github.com/loctvl842/monokai-pro.nvim",
-	"https://github.com/mofiqul/dracula.nvim",
-	"https://github.com/benjasper/nightfall.nvim",
+	-- "https://github.com/folke/tokyonight.nvim",
+	-- "https://github.com/neanias/everforest-nvim",
+	-- "https://github.com/thesimonho/kanagawa-paper.nvim",
+	-- "https://github.com/catppuccin/nvim",
+	-- "https://github.com/vague-theme/vague.nvim",
+	-- "https://github.com/mtendekuyokwa/stoics.nvim",
+	-- "https://github.com/ankushbhagats/pastel.nvim",
+	-- "https://github.com/loctvl842/monokai-pro.nvim",
+	-- "https://github.com/mofiqul/dracula.nvim",
+	-- "https://github.com/benjasper/nightfall.nvim",
 	"https://github.com/blazkowolf/gruber-darker.nvim",
 })
 

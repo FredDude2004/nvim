@@ -27,7 +27,6 @@ keymap("n", "<leader>gp", "<cmd>Git push<CR>", { noremap = true, silent = true }
 keymap("n", "<leader>o", ":update<CR> :source<CR>", { desc = "Source a file" })
 keymap("n", "-", ":Oil<CR>", { desc = "Open File System" })
 keymap("n", "<leader>w", ":write<CR>", { desc = "Write a file" })
-keymap("n", "<leader>q", ":quote<CR>", { desc = "Quit a file" })
 keymap("n", "<C-n>", ":cnext<CR>", { desc = "Ctr + n for next entry in QuickFix List" })
 keymap("n", "<C-p>", ":cprev<CR>", { desc = "Ctr + p for previous entry in QuickFix List" })
 keymap("n", "<C-d>", "<C-d>zz", { desc = "Center screen when navigating down" })
