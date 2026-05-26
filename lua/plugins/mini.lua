@@ -12,5 +12,10 @@ require("mini.indentscope").setup({
 -- require("mini.pairs").setup({})
 require("mini.trailspace").setup({})
 require("mini.bufremove").setup({})
-require("mini.notify").setup({})
+require("mini.notify").setup({
+	lsp_progress = {
+		-- Whether to enable showing
+		enable = false,
+	},
+})
 require("mini.icons").setup({})

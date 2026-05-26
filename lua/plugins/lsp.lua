@@ -123,5 +123,6 @@ vim.lsp.enable({
 	"ts_ls",
 	"gopls",
 	"clangd",
+	"dockerls",
 	"efm",
 })
