@@ -13,6 +13,7 @@ vim.pack.add({
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/nvim-lualine/lualine.nvim",
 	"https://github.com/folke/which-key.nvim",
+	"https://github.com/folke/todo-comments.nvim",
 	{
 		src = "https://github.com/nvim-telescope/telescope.nvim",
 		version = "v0.1.9",
@@ -56,3 +57,4 @@ require("plugins.gitsigns")
 require("plugins.mini")
 require("plugins.obsidian")
 require("plugins.lualine")
+require("plugins.todo_comments")
