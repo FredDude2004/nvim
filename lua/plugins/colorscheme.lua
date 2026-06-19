@@ -36,6 +36,10 @@ end
 
 -- vim.cmd.colorscheme("catppuccin-nvim")
 
+-- OR
+
+-- vim.cmd.colorscheme("catppuccin")
+
 -- ================================================================================
 -- VAGUE
 -- ================================================================================
@@ -56,19 +60,19 @@ end
 -- EVERFOREST
 -- ================================================================================
 
--- vim.o.background = "dark" -- or "light"
--- require("everforest").setup({
--- 	background = "medium", -- 'hard', 'medium', 'soft'
--- 	transparent_background_level = 2,
--- 	ui_contrast = "high", -- 'low', 'high'
--- 	diagnostic_text_highlight = 1,
--- 	colours_override = function(palette)
--- 		palette.red = "#EA6962"
--- 		palette.blue = "#7DAEA3"
--- 		palette.yellow = "#CD9E52"
--- 	end,
--- })
--- vim.cmd.colorscheme("everforest")
+vim.o.background = "dark" -- or "light"
+require("everforest").setup({
+	background = "medium", -- 'hard', 'medium', 'soft'
+	transparent_background_level = 2,
+	ui_contrast = "high", -- 'low', 'high'
+	diagnostic_text_highlight = 1,
+	colours_override = function(palette)
+		-- palette.red = "#EA6962"
+		-- palette.blue = "#7DAEA3"
+		-- palette.yellow = "#CD9E52"
+	end,
+})
+vim.cmd.colorscheme("everforest")
 
 -- ================================================================================
 -- STOICS
@@ -177,7 +181,7 @@ end
 -- GRUBER DARKER
 -- ================================================================================
 
-vim.cmd.colorscheme("gruber-darker")
+-- vim.cmd.colorscheme("gruber-darker")
 
 -- ================================================================================
 

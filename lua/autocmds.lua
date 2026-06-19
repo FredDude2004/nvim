@@ -127,3 +127,12 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*" },
 	command = [[%s/\s\+$//e]],
 })
+
+-- markdown max line lenght of 100
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = { "*.md", "*.markdown" },
+	callback = function()
+		vim.opt_local.textwidth = 100
+		vim.opt_local.formatoptions:append("t")
+	end,
+})

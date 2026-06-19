@@ -117,3 +117,4 @@ keymap("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
 keymap("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
 keymap("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
+keymap("n", "<leader>pv", ":TypstPreview<Cr>", { desc = "Open a Typst preveiw" })

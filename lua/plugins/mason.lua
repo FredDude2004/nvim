@@ -25,7 +25,6 @@ require("mason-tool-installer").setup({
 		"fixjson",
 		"luacheck",
 		"stylua",
-		"flake8",
 		"black",
 		"shellcheck",
 		"shfmt",
