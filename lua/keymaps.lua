@@ -15,7 +15,7 @@ keymap("n", "<C-d>", "<C-d>zz") -- Scroll down and center the cursor
 keymap("n", "<C-u>", "<C-u>zz") -- Scroll up and center the cursor
 keymap("n", "<Leader>w", "<cmd>w!<CR>", s) -- Save the current file
 keymap("n", "<Leader>q", "<cmd>q<CR>", s) -- Quit Neovim
-keymap("n", "<Leader>te", "<cmd>tabnew<CR>", s) -- Open a new tab
+keymap("n", "<Leader>tn", "<cmd>tabnew<CR>", s) -- Open a new tab
 keymap("n", "<Leader>-", "<cmd>vsplit<CR>", s) -- Split the window vertically
 keymap("n", "<Leader>_", "<cmd>split<CR>", s) -- Split the window horizontally
 keymap("n", "<Leader>fo", ":lua vim.lsp.buf.format()<CR>", s) -- Format the current buffer using LSP
