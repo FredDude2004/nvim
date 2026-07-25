@@ -19,10 +19,14 @@ vim.pack.add({
 		src = "https://github.com/nvim-telescope/telescope.nvim",
 		version = "v0.1.9",
 	},
-	{
-		src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
-		build = "make",
-	},
+	-- NOTE: This will make telescope a little bit faster but you have to comiple it manually
+	-- {
+	-- 	src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim",
+	-- 	build = {
+	-- 		"cmake -S. -Bbuild",
+	-- 		"cmake --build build --config Release",
+	-- 	},
+	-- },
 	{
 		src = "https://github.com/saghen/blink.cmp",
 		version = vim.version.range("1.*"),
@@ -33,10 +37,9 @@ vim.pack.add({
 		build = ":TSUpdate",
 	},
 
-
 	-- Colorschemes
-	-- "https://github.com/folke/tokyonight.nvim",
 	"https://github.com/neanias/everforest-nvim",
+	-- "https://github.com/folke/tokyonight.nvim",
 	-- "https://github.com/thesimonho/kanagawa-paper.nvim",
 	-- "https://github.com/catppuccin/nvim",
 	-- "https://github.com/vague-theme/vague.nvim",
