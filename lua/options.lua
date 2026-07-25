@@ -30,7 +30,7 @@ vim.opt.showmode = false -- do not show the mode, instead have it in statusline
 vim.opt.pumheight = 10 -- popup menu height
 vim.opt.pumblend = 10 -- popup menu transparency
 vim.opt.winblend = 0 -- floating window transparency
-vim.opt.conceallevel = 0 -- obsidian requirement
+vim.opt.conceallevel = 2 -- obsidian requirement
 vim.opt.concealcursor = "" -- do not hide cursorline in markup
 vim.opt.lazyredraw = true -- do not redraw during macros
 vim.opt.synmaxcol = 300 -- syntax highlighting limit
@@ -86,3 +86,21 @@ vim.opt.maxmempattern = 20000 -- increase max memory
 -- Add borders between splits
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#E0B094", bg = "NONE" })
 vim.opt.laststatus = 3
+
+-- local markdown_query =
+--   vim.treesitter.query.get("markdown", "highlights")
+--
+-- vim.treesitter.query.set(
+--   "markdown",
+--   "highlights",
+--   [[
+--     ; inherits: markdown
+--
+--     (fenced_code_block
+--       (fenced_code_block_delimiter) @markup.raw.block)
+--
+--     (fenced_code_block
+--       (info_string
+--         (language) @label))
+--   ]]
+-- )

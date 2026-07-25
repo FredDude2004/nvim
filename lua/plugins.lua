@@ -15,6 +15,10 @@ vim.pack.add({
 	"https://github.com/folke/which-key.nvim",
 	"https://github.com/folke/todo-comments.nvim",
 	"https://github.com/chomosuke/typst-preview.nvim",
+	"https://github.com/christoomey/vim-tmux-navigator",
+	"https://github.com/tpope/vim-dadbod",
+	"https://github.com/kristijanhusak/vim-dadbod-completion",
+	"https://github.com/kristijanhusak/vim-dadbod-ui",
 	{
 		src = "https://github.com/nvim-telescope/telescope.nvim",
 		version = "v0.1.9",

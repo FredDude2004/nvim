@@ -36,6 +36,20 @@ keymap("n", "N", "Nzzzv", { desc = "Center screen when cycling search term" })
 keymap("n", "<leader>Y", '"+Y', { desc = "[Y]ank to system clipboard" })
 keymap("n", "<leader>d", '"_d', { desc = "[D]elete to void register" })
 keymap("n", "<leader>y", '"+y', { desc = "[Y]ank to system clipboard" })
+vim.keymap.set("n", "<leader>ch", function()
+	local line = vim.api.nvim_get_current_line()
+
+	if line:find("%- %[%]") then
+		-- Handles "- []" if you ever have that
+		line = line:gsub("%- %[%]", "- [x]", 1)
+	elseif line:find("%- %[ %]") then
+		line = line:gsub("%- %[ %]", "- [x]", 1)
+	elseif line:find("%- %[x%]") then
+		line = line:gsub("%- %[x%]", "- [ ]", 1)
+	end
+
+	vim.api.nvim_set_current_line(line)
+end, { desc = "[C][H]eckbox Toggle" })
 
 -- Remap C-hjkl to navigate splits
 keymap("n", "<C-h>", "<C-w>h", { desc = "Go to left split" })

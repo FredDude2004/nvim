@@ -1,26 +1,26 @@
-local function set_transparent() -- set UI component to transparent
-	local groups = {
-		"Normal",
-		"NormalNC",
-		"EndOfBuffer",
-		"NormalFloat",
-		"FloatBorder",
-		"SignColumn",
-		"StatusLine",
-		"StatusLineNC",
-		"TabLine",
-		"TabLineFill",
-		"TabLineSel",
-		"ColorColumn",
-	}
-	for _, g in ipairs(groups) do
-		vim.api.nvim_set_hl(0, g, { bg = "none" })
-	end
-	vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
-	vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
-	vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
-	vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#767676", bg = "NONE" })
-end
+-- local function set_transparent() -- set UI component to transparent
+-- 	local groups = {
+-- 		"Normal",
+-- 		"NormalNC",
+-- 		"EndOfBuffer",
+-- 		"NormalFloat",
+-- 		"FloatBorder",
+-- 		"SignColumn",
+-- 		"StatusLine",
+-- 		"StatusLineNC",
+-- 		"TabLine",
+-- 		"TabLineFill",
+-- 		"TabLineSel",
+-- 		"ColorColumn",
+-- 	}
+-- 	for _, g in ipairs(groups) do
+-- 		vim.api.nvim_set_hl(0, g, { bg = "none" })
+-- 	end
+-- 	vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
+-- 	vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
+-- 	vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
+-- 	vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#767676", bg = "NONE" })
+-- end
 
 -- ================================================================================
 -- KANAGAWA
@@ -67,12 +67,19 @@ require("everforest").setup({
 	ui_contrast = "high", -- 'low', 'high'
 	diagnostic_text_highlight = 1,
 	colours_override = function(palette)
+		palette.bg_dim = "#0A0A0A"
+		palette.bg0 = "#0F0F0F"
+		palette.bg1 = "#171717"
+		palette.bg2 = "#202020"
+		palette.bg3 = "#292929"
+		palette.bg4 = "#333333"
+		palette.bg5 = "#3D3D3D"
 		-- palette.red = "#EA6962"
 		-- palette.blue = "#7DAEA3"
 		-- palette.yellow = "#CD9E52"
 	end,
 })
-vim.cmd.colorscheme("everforest")
+vim.cmd.colorscheme("myforest")
 
 -- ================================================================================
 -- STOICS
@@ -185,4 +192,4 @@ vim.cmd.colorscheme("everforest")
 
 -- ================================================================================
 
-set_transparent()
+-- set_transparent()

@@ -1,3 +1,4 @@
+-- vim.cmd.colorscheme("myforest")
 require("autocmds")
 require("keymaps")
 require("options")
