@@ -9,6 +9,8 @@ vim.opt.scrolloff = 10 -- keep 10 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.textwidth = 100
+vim.opt.colorcolumn = "100"
 
 vim.opt.tabstop = 4 -- tabwidth
 vim.opt.shiftwidth = 4 -- indent width
@@ -17,6 +19,7 @@ vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.smartindent = true -- smart auto-indent
 vim.opt.autoindent = true -- copy indent from current line
 
+vim.opt.cinkeys:remove(":") -- stop brining to front of line when typing :: namespace operator in c++
 vim.opt.ignorecase = true -- case insensitive search
 vim.opt.smartcase = true -- case sensitive if uppercase in string
 vim.opt.hlsearch = true -- highlight search matches
@@ -53,6 +56,7 @@ vim.opt.timeoutlen = 500 -- timeout duration
 vim.opt.ttimeoutlen = 50 -- key code timeout
 vim.opt.autoread = true -- auto-reload changes if outside of neovim
 vim.opt.autowrite = false -- do not auto-save
+vim.opt.wrap = false -- do not wrap text
 
 vim.opt.hidden = true -- allow hidden buffers
 vim.opt.errorbells = false -- no error sounds
@@ -87,20 +91,5 @@ vim.opt.maxmempattern = 20000 -- increase max memory
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#E0B094", bg = "NONE" })
 vim.opt.laststatus = 3
 
--- local markdown_query =
---   vim.treesitter.query.get("markdown", "highlights")
---
--- vim.treesitter.query.set(
---   "markdown",
---   "highlights",
---   [[
---     ; inherits: markdown
---
---     (fenced_code_block
---       (fenced_code_block_delimiter) @markup.raw.block)
---
---     (fenced_code_block
---       (info_string
---         (language) @label))
---   ]]
--- )
+vim.cmd("hi DapBreakpointColor guifg=#e47e80")
+vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpointColor", linehl = "", numhl = "" })

@@ -126,9 +126,10 @@ keymap("t", "<Esc>", "<C-\\><C-n>", { desc = "Get out of terminal mode" })
 
 keymap("i", "<C-BS>", "<C-W>", { noremap = true }) -- Makes CTRL + Backspcae delete a word back
 
-keymap("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
-keymap("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
-
 keymap("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
 keymap("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
 keymap("n", "<leader>pv", ":TypstPreview<Cr>", { desc = "Open a Typst preveiw" })
+keymap("n", "<leader>fl", function()
+	vim.cmd("normal! 0f[;l")
+	vim.lsp.buf.definition()
+end, { desc = "Follow an obsidian link" })

@@ -126,3 +126,6 @@ vim.lsp.enable({
 	"dockerls",
 	"efm",
 })
+
+vim.lsp.config("clangd", {})
+

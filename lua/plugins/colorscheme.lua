@@ -60,25 +60,6 @@
 -- EVERFOREST
 -- ================================================================================
 
-vim.o.background = "dark" -- or "light"
-require("everforest").setup({
-	background = "medium", -- 'hard', 'medium', 'soft'
-	transparent_background_level = 2,
-	ui_contrast = "high", -- 'low', 'high'
-	diagnostic_text_highlight = 1,
-	colours_override = function(palette)
-		palette.bg_dim = "#0A0A0A"
-		palette.bg0 = "#0F0F0F"
-		palette.bg1 = "#171717"
-		palette.bg2 = "#202020"
-		palette.bg3 = "#292929"
-		palette.bg4 = "#333333"
-		palette.bg5 = "#3D3D3D"
-		-- palette.red = "#EA6962"
-		-- palette.blue = "#7DAEA3"
-		-- palette.yellow = "#CD9E52"
-	end,
-})
 vim.cmd.colorscheme("myforest")
 
 -- ================================================================================

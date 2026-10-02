@@ -18,7 +18,6 @@ require("mason-tool-installer").setup({
 	ensure_installed = {
 		"tree-sitter-cli",
 		"clang-format",
-		"cpplint",
 		"gofumpt",
 		"revive",
 		"prettierd",

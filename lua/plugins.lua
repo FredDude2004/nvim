@@ -19,6 +19,12 @@ vim.pack.add({
 	"https://github.com/tpope/vim-dadbod",
 	"https://github.com/kristijanhusak/vim-dadbod-completion",
 	"https://github.com/kristijanhusak/vim-dadbod-ui",
+	"https://github.com/windwp/nvim-autopairs",
+	"https://github.com/mfussenegger/nvim-dap",
+	"https://github.com/leoluz/nvim-dap-go",
+	"https://github.com/rcarriga/nvim-dap-ui",
+	"https://github.com/theHamsta/nvim-dap-virtual-text",
+	"https://github.com/nvim-neotest/nvim-nio",
 	{
 		src = "https://github.com/nvim-telescope/telescope.nvim",
 		version = "v0.1.9",
@@ -67,3 +73,5 @@ require("plugins.mini")
 require("plugins.obsidian")
 require("plugins.lualine")
 require("plugins.todo_comments")
+require("plugins.autopairs")
+require("plugins.dap")
