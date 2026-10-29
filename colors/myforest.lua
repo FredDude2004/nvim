@@ -9,7 +9,7 @@ everforest.setup({
 	diagnostic_text_highlight = true,
 
 	colours_override = function(palette)
-		-- palette.bg0 = "#202528"
+		palette.bg0 = "#202528"
 		-- palette.bg0 = "#1E2326"
 	end,
 })
