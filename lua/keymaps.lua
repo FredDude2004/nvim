@@ -121,8 +121,8 @@ keymap("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move highlighted text down" })
 
 keymap("x", "<leader>p", '"_dP', { desc = "[P]aste to void register" })
 
-keymap("t", "<Esc>", "<C-\\><C-N>") -- Exit terminal mode
 keymap("t", "<Esc>", "<C-\\><C-n>", { desc = "Get out of terminal mode" })
+keymap("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "Navigate right out of terminal mode into the editor" })
 
 keymap("i", "<C-BS>", "<C-W>", { noremap = true }) -- Makes CTRL + Backspcae delete a word back
 
